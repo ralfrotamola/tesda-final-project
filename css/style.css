@@ -1,0 +1,29 @@
+div#bg-img {
+    height: 80vh;
+    width: 100%;
+    background-image: url('https://i.pinimg.com/originals/f2/1a/83/f21a8381046eb4ff9ae9a14935b55918.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div#search-container {
+    /* background-color: teal; */
+}
+
+#item-container {
+    /* background-color: #0a3d62; */
+    background-color: #eee;
+}
+
+#form-group{
+    margin-left: 30vh;
+    margin-right: 30vh;
+}
+
+.search-container {
+    border-radius: 0% !important;
+}
+
+.item:hover{
+    cursor: pointer;
+}

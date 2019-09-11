@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/materia/bootstrap.min.css" rel="stylesheet" integrity="sha384-SYbiks6VdZNAKT8DNoXQZwXAiuUo5/quw6nMKtFlGO/4WwxW86BSTMtgdzzB9JJl" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard ni koya pat</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Look for events">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search Event</button>
+            </form> -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="">Products</a>
+                    <!-- <span class="sr-only">(current)</span> -->
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="">logout</a>
+                    <!-- <span class="sr-only">(current)</span> -->
+                </li>
+            </ul>            
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Create Product</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Product Image</label>
+                            <input type="file" name="" id="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Product Name</label>
+                            <input type="text" name="" id="" class="form-control" placeholder="Product Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Product Description</label>
+                            <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Product QTY</label>
+                            <input type="number" name="" id="" class="form-control" placeholder="Product QTY">                            
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success form-control">Create Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <h4>Search Product</h4>
+                            <input type="text" name="" id="" class="form-control" placeholder="Search Product">
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product Image</th>
+                                    <th>Product Name</th>
+                                    <th>Product Desct</th>
+                                    <th>QTY</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">image path ni pat</a></td>
+                                    <td>Sabon ni pat</td>
+                                    <td>Sample description</td>
+                                    <td>6969</td>
+                                    <td>
+                                        <div class="form-group-inline">
+                                            <button class="btn btn-success"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-primary"><i class="fa fa-edit"></i></button>
+                                            <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+  <!-- JQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <!-- Bootsrap JS CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

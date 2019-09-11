@@ -1,0 +1,7 @@
+html, .container-fluid {
+    background-color: #eee;
+}
+
+#main-container {
+    width: 90vh;
+}
