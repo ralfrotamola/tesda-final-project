@@ -1,0 +1,29 @@
+{
+    "product": {
+        "comment": {
+            "desc": "product model"
+        },
+        "model": {
+            "id": "unique",
+            "name": "string",
+            "img_path": "string",
+            "desc": "string",
+            "qty": "int",
+            "user_id": "unique"
+        }
+    }, 
+    "user": {
+        "comment": {
+            "desc": "user model"
+        },
+        "model": {
+            "user_id": "unique",
+            "fullname": "string",
+            "username": "string",
+            "password": "md5"
+        }
+    },
+    "functions": {
+        "product-view": {}
+    }
+}

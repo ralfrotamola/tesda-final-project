@@ -9,8 +9,8 @@ class Item {
         products.forEach(product => {
             let layout = this.itemLayout(product);
             layouts.push(layout);
-        })    
-    
+        })
+        
         // console.log(layouts);
         document.getElementById("item-list").innerHTML = layouts;
         this.loadItemReference();
@@ -45,4 +45,15 @@ class Item {
             });   
         })    
     }
+
+    // products.forEach(product => {
+//     console.log(product.title);
+// })
+
+
+
+// setLayouts();
+// setTimeout(function(){
+
+// }, 1000);
 }
