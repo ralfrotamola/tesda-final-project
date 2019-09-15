@@ -13,7 +13,7 @@ class Item {
         
         // console.log(layouts);
         document.getElementById("item-list").innerHTML = layouts;
-        this.loadItemReference();
+        this.loadItemReference(products);
     }
     
     itemLayout = (product) => {
@@ -34,16 +34,21 @@ class Item {
         return layout
     }
     
-    loadItemReference = _ => {
+    loadItemReference = products => {
         console.log("item reference called")
         const items = document.querySelectorAll(".item");
     
-        items.forEach(item => {
+        items.forEach((item, i) => {
             item.addEventListener('click', e => {
-                alert(`item clicked: ${e.target}`)
+                // alert(`item clicked: ${e.target}`)
+                console.log(products);
                 location.href = 'item-description.html';
             });   
-        })    
+        })
+    }
+
+    saveToLS = () => {
+
     }
 
     // products.forEach(product => {

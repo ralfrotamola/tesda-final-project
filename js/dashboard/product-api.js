@@ -1,18 +1,18 @@
 class Product {
     constructor(){}
 
-    sample(){
-        console.log('sample')
-    }
-    async getProducts(url) {
-        const fetchData = await fetch(url, {
-            method: 'GET',
-            headers: { 'Content-type': 'application/json' }
-        });
-        const response = await fetchData.json()
+    // sample(){
+    //     console.log('sample')
+    // }
+    // async getProducts(url) {
+    //     const fetchData = await fetch(url, {
+    //         method: 'GET',
+    //         headers: { 'Content-type': 'application/json' }
+    //     });
+    //     const response = await fetchData.json()
 
-        return response
-    }
+    //     return response
+    // }
 
     async getProductsByUser(url) {
         const fetchData = await fetch(url, {

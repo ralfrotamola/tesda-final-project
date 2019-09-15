@@ -7,8 +7,11 @@ const btnLogin = document.getElementById('btn-login');
 
 
 const loginUser = () => {
-    console.log(user.value)
-    console.log(pass.value)
+    // console.log(user.value)
+    // console.log(pass.value)
+
+    localStorage.removeItem("user");
+
     const data = {
         username: user.value,
         password: pass.value,
@@ -19,6 +22,8 @@ const loginUser = () => {
         if (result.success) {
             saveToLS(result.user)
             console.log(result.user)
+        } else {
+            alert('Auth Error')
         }
     })
     .catch(error => console.log(error))
