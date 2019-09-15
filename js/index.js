@@ -7,8 +7,8 @@ product
         const products = response.products;
         if (products.length > 0) {
             item.setLayouts(products);
-            filterItem();
-            console.log(products)
+            // filterItem();
+            // console.log(products)
         } else {
             console.log("empty product")
         }
@@ -44,7 +44,7 @@ const searchProduct = (e) => {
           } else {
             product.parentElement.parentElement.parentElement.style.display = 'none';
           }
-        console.log(productTitle)
+        // console.log(productTitle)
     })
 }
 const searchInput = document.getElementById("search-product");

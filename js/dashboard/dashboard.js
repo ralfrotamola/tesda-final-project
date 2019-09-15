@@ -13,35 +13,59 @@ const product = new Product;
 //     .catch(error => console.log(error));
 
 let userDetail = {}
+
+// get user from local storage
 const getUserFrmLS = _ => {
     if (localStorage.getItem("user") === null) {
         location.href = "login.html"
     } else {
         userDetail = JSON.parse(localStorage.getItem("user"));
-        loadUserData(userDetail)
+        loadUserDataToView(userDetail)
     }
     loadProducts(userDetail._id);
     // console.log(userDetail);
 }
 
-const loadUserData = user => {
+// load user data from local storage to HTML view
+const loadUserDataToView = user => {
     let user_name = document.getElementById("user_name");
     user_name.textContent = `Hello Koya, ${user.username}`;
     console.log(user_name)
 }
 
-const loadToTable = (productsTemp) => {
+// load product template to table
+const loadToTable = (productsTemplate) => {
     let productDiv = document.getElementById("product-list");
     // let productTable = document.getElementById("product-list");
     // productTable.getElementsByTagName("tbody") = '' ;
-    console.log(productDiv);
+    let productTable = document.createElement("table");
+    productTable.className = "table";
+    let thead = document.createElement("thead")
+    let tbody = document.createElement("tbody");
+    thead.innerHTML 
+        = `<tr>
+            <th width="40%">Product Image</th>
+            <th>Product Name</th>
+            <th>Product Desct</th>
+            <th>Price</th>
+            <th>QTY</th>
+            <th>Action</th>
+        </tr>`
+    tbody.innerHTML = productsTemplate
+    productTable.appendChild(thead);
+    productTable.appendChild(tbody);
+    productDiv.appendChild(productTable);
+    // productTable.appendChild(productsTemplate)
+    // console.log(productTable);
 }
 
+// load product from api
 const loadProducts = (user_id) => {
     console.log("called load product")
     product
         .getProductsByUser(`http://localhost:8080/product/getproductbyuserid/${user_id}`)
         .then(result => {
+            // empty array for product templates
             let productsTemp = [];
             if (result.success) {
                 const products = result.products;
@@ -50,6 +74,8 @@ const loadProducts = (user_id) => {
                     let productTemp = loadProductToView(product);
                     productsTemp.push(productTemp);
                 });
+            } else {
+                alert("Empty product list")
             }
             loadToTable(productsTemp);
             // console.log(result)
@@ -80,7 +106,6 @@ const loadProductToView = (product) => {
         </tr>`;
 
         // console.log(productTemplate);
-
         return productTemplate;
 }
 
