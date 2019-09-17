@@ -18,10 +18,15 @@ const registerUser = e => {
         password: username.value.trim()                
     }
     
-    let valid = validation.check([fullname, username, password, confirmPassword]);
+    let invalidElements = validation
+                            .check([fullname, username, password, confirmPassword], 
+                            ["invalid fullname", "invalid username", "invalid password", "invalid confirm password"]);
 
+    if (invalidElements.length > 0) {
+        register.setAttribute("disable", true);
+    }
     console.log(data)
-    console.log(valid);
+    console.log(invalidElements.length);
 }
 
 loadEventListeners();
